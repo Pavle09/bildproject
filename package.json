@@ -1,0 +1,31 @@
+{
+  "name": "projekat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss build src/styles.css -o public/styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "autoprefixer": "^10.2.3",
+    "counterup2": "^1.0.4",
+    "jquery": "^3.5.1",
+    "owl.carousel": "^2.3.4",
+    "postcss": "^8.2.4",
+    "tailwindcss": "^2.0.2",
+    "wow.js": "^1.2.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.18.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "prettier": "^2.2.1",
+    "tailwindcss-pseudo-elements": "^1.5.1"
+  }
+}

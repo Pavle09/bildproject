@@ -1,0 +1,300 @@
+/* ./your-css-folder/styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'animate.css';
+@import 'owl.carousel/dist/assets/owl.carousel.css';
+@import 'owl.carousel';
+
+.notoserifitalic {
+  font-family: 'Noto Serif', serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.notoserifregular {
+  font-family: 'Noto Serif', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.notoserifbold {
+  font-family: 'Noto Serif', serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* roboto-regular - latin-ext_latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/roboto/roboto.eot'); /* IE9 Compat Modes */
+  src: local('Roboto'), local('Roboto-Regular'),
+    url('fonts/roboto/roboto.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('fonts/roboto/roboto.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('fonts/roboto/roboto.woff') format('woff'),
+    /* Modern Browsers */ url('fonts/roboto/roboto.ttf') format('truetype'),
+    /* Safari, Android, iOS */ url('fonts/roboto/roboto.svg#Roboto')
+      format('svg'); /* Legacy iOS */
+}
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url('//hello.myfonts.net/count/3ce04c');
+
+@font-face {
+  font-family: 'GalanoGrotesque-Bold';
+  src: url('fonts/GalanoGrotesque-Bold/font.woff2') format('woff2'),
+    url('fonts/GalanoGrotesque-Bold/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'GalanoGrotesque-Medium';
+  src: url('fonts/GalanoGrotesque-Medium/font.woff2') format('woff2'),
+    url('fonts/GalanoGrotesque-Medium/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'GalanoGrotesque-Regular';
+  src: url('fonts/GalanoGrotesque-Regular/font.woff2') format('woff2'),
+    url('fonts/GalanoGrotesque-Regular/font.woff') format('woff');
+}
+
+.modalOuter {
+  display: none;
+}
+.modalOuter.visible {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 40;
+  pointer-events: all;
+}
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #231f20;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #231f20, #fff);
+  width: 8px;
+  border-radius: 3px;
+  border: 1px solid #e2f4e8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e2f4e8;
+  border: 1px solid #e2f4e8;
+}
+
+::-webkit-scrollbar-button {
+  background: #231f20;
+  width: 10px;
+}
+
+.barclass {
+  position: relative;
+  display: inline-block;
+  border-bottom: 2px solid #0c8866;
+  line-height: none;
+}
+
+@keyframes baranimation {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(230%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.barclass:before {
+  content: ' ';
+  position: absolute;
+  width: 30%;
+  z-index: 1;
+  bottom: -3px;
+  border: 2px solid #555;
+  border-radius: 20%;
+  animation: baranimation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+}
+
+.reinventing {
+  @apply inline-block border-b-4px font-galanobold border-s3h2c leading-none;
+}
+.reinventingsm {
+  @apply inline-block border-b-2px font-galanobold border-s3h2c leading-none;
+}
+.nl {
+  @apply inline-block border-b-4px font-galanobold border-s13c;
+}
+.nlsm {
+  @apply inline-block border-b-2px font-galanobold border-s13c;
+}
+.custom {
+  @apply inline-block border-b-3px border-s3h2c;
+}
+.custom1 {
+  @apply inline-block border-b-3px border-s3h2c;
+}
+.customnumbers {
+  @apply inline-block border-b-2px border-s3h2c -mt-3;
+}
+
+.numstyles {
+  font-size: 35px !important;
+  font-family: NotoSerif-Regular !important;
+}
+.icon:hover {
+  fill: #fff;
+}
+
+.owl-nav .owl-prev {
+  position: absolute;
+  left: 282px;
+  top: 340px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50% !important;
+  box-shadow: 2px 2px 10px 1px #e2f4e8 !important;
+  outline: none !important;
+  background-color: white !important;
+}
+
+.owl-nav .owl-next {
+  position: absolute;
+  right: 255px;
+  top: 340px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50% !important;
+  box-shadow: 2px 2px 10px 1px #e2f4e8 !important;
+  outline: none !important;
+  background-color: white !important;
+}
+#sl2 .owl-nav .owl-prev {
+  position: absolute;
+  left: 275px;
+  top: 538px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50% !important;
+  box-shadow: 2px 2px 10px 1px #e2f4e8 !important;
+  outline: none !important;
+  background-color: white !important;
+}
+#sl2 .owl-nav .owl-next {
+  position: absolute;
+  right: 265px;
+  top: 538px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50% !important;
+  box-shadow: 2px 2px 10px 1px #e2f4e8 !important;
+  outline: none !important;
+  background-color: white !important;
+}
+.owl-item {
+  opacity: 0.4 !important;
+}
+.owl-item.active {
+  opacity: 1 !important;
+  animation: fade 2s linear 1;
+}
+.owl-item.active #under {
+  display: inline-block !important;
+  border-bottom: 3px solid #0c8866 !important;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .owl-nav .owl-next {
+    position: absolute;
+    right: 3px !important;
+    top: 120px !important;
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 50% !important;
+    box-shadow: 2px 2px 10px 1px #e2f4e8 !important;
+    outline: none !important;
+    background-color: white !important;
+  }
+  .owl-nav .owl-prev {
+    position: absolute;
+    left: 10px !important;
+    top: 120px !important;
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 50% !important;
+    box-shadow: 2px 2px 10px 1px #e2f4e8 !important;
+    outline: none !important;
+    background-color: white !important;
+  }
+}
+
+@media only screen and (max-width: 1536px) {
+  .owl-nav .owl-next {
+    position: absolute;
+    right: 7%;
+    top: 50%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50% !important;
+    box-shadow: 2px 2px 10px 1px #e2f4e8 !important;
+    outline: none !important;
+    background-color: white !important;
+  }
+  .owl-nav .owl-prev {
+    position: absolute;
+    left: 7%;
+    top: 50%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50% !important;
+    box-shadow: 2px 2px 10px 1px #e2f4e8 !important;
+    outline: none !important;
+    background-color: white !important;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+.owl-dots .owl-dot button:focus {
+  outline: none;
+}
+.owl-dots .owl-dot.active button {
+  text-decoration: underline;
+  transform: scale(1.3);
+}
+
+.headerborder a:hover {
+  position: relative;
+  display: inline-block;
+  border-bottom: 2px solid #fff;
+}
+button.hmenu {
+  outline: none;
+}
